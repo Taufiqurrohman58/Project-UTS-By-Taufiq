@@ -5,6 +5,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Beranda from './screens/Beranda';
+import Promo from './screens/Promo';
 import Riwayat from './screens/Riwayat';
 import Kontak from './screens/Kontak';
 
@@ -21,6 +22,17 @@ const MenuTab = () => {
           tabBarLabel: 'beranda',
           tabBarIcon: ({color, size}) => (
             <MaterialCommunityIcons name="home" color={color} size={size} />
+          ),
+        }}
+      />
+
+      <Tabs.Screen
+        name="Promo"
+        component={Promo}
+        options={{
+          tabBarLabel: 'Promo',
+          tabBarIcon: ({color, size}) => (
+            <MaterialCommunityIcons name="brightness-percent" color={color} size={size} />
           ),
         }}
       />
