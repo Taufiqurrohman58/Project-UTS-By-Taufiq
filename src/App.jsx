@@ -5,15 +5,15 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Beranda from './screens/Beranda';
-import Profil from './screens/Profil';
-import Pengaturan from './screens/Pengaturan';
+import Riwayat from './screens/Riwayat';
+import Kontak from './screens/Kontak';
 
 const Stack = createNativeStackNavigator();
 const Tabs = createBottomTabNavigator();
 
 const MenuTab = () => {
   return (
-    <Tabs.Navigator screenOptions={{tabBarActiveTintColor: '#e91e63'}}>
+    <Tabs.Navigator screenOptions={{tabBarActiveTintColor: 'green'}}>
       <Tabs.Screen
         name="Beranda"
         component={Beranda}
@@ -26,23 +26,23 @@ const MenuTab = () => {
       />
 
       <Tabs.Screen
-        name="Profil"
-        component={Profil}
+        name="Riwayat"
+        component={Riwayat}
         options={{
-          tabBarLabel: 'Profil',
+          tabBarLabel: 'Riwayat',
           tabBarIcon: ({color, size}) => (
-            <MaterialCommunityIcons name="account" color={color} size={size} />
+            <MaterialCommunityIcons name="backup-restore" color={color} size={size} />
           ),
         }}
       />
 
       <Tabs.Screen
-        name="Pengaturan"
-        component={Pengaturan}
+        name="Kontak"
+        component={Kontak}
         options={{
-          tabBarLabel: 'Pengaturan',
+          tabBarLabel: 'Kontak',
           tabBarIcon: ({color, size}) => (
-            <MaterialCommunityIcons name="cog" color={color} size={size} />
+            <MaterialCommunityIcons name="contacts" color={color} size={size} />
           ),
         }}
       />

@@ -1,14 +1,14 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 
-const Pengaturan = () => {
+const Kontak = () => {
   return (
     <View>
-      <Text>Pengaturan</Text>
+      <Text>Kontak</Text>
     </View>
   );
 };
 
-export default Pengaturan;
+export default Kontak;
 
 const styles = StyleSheet.create({});
