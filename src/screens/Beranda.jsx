@@ -8,6 +8,15 @@ const Beranda = ({navigation}) => {
         <Text style={styles.isitext1}>FIQUR CELL</Text>
         <Text style={styles.isitext2}>Melayani e-transaksi</Text>
       </ImageBackground>
+      <View style={styles.container}>
+      <View
+        style={styles.btnpromo}>
+        <Text style={styles.btnTitle2}>Promo Spesial</Text>
+        <TouchableOpacity onPress={() => navigation.navigate('Promo')}>
+        <Text style={styles.btnContent2}>Lihat Semua>></Text>
+        </TouchableOpacity>
+      </View>
+      </View>
  
     </View>
   );
@@ -36,4 +45,26 @@ const styles = StyleSheet.create({
     fontSize: 12,
     textAlign: 'center',
   },
+
+  container: { 
+    padding: 20,
+  },
+
+  btnpromo: {
+    backgroundColor: 'green',
+    padding: 10,
+
+    borderRadius: 10,
+    marginBottom: 20,
+  },
+
+  btnTitle2: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 10,
+  },
+  btnContent2: {
+    fontSize: 16,
+  },
+
 });
