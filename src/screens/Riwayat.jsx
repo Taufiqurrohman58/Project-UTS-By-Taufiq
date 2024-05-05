@@ -1,14 +1,24 @@
-import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
 
-const Riwayat = () => {
+const HistoryScreen = () => {
   return (
-    <View>
-      <Text>Riwayat</Text>
+    <View style={styles.container}>
+      <Text style={styles.noHistoryText}>No History Available</Text>
     </View>
   );
 };
 
-export default Riwayat;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+  },
+  noHistoryText: {
+    fontSize: 16,
+    fontStyle: 'italic',
+    color:'black'
+  },
+});
 
-const styles = StyleSheet.create({});
+export default HistoryScreen;
